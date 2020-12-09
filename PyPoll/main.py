@@ -65,3 +65,21 @@ print(f'Winner: {mode(vote_list)}')
 print("----------------")
 
 #Add script to export as TXT
+f = open('analysis.txt', 'wt')
+
+
+print("Election Results",file=f)
+print("----------------",file=f)
+print(f"Total votes: {vote_count}",file=f)
+print("----------------",file=f)
+print(f"{candidate_one}: {round(candidate_one_ballots/vote_count*100,3)}% ({candidate_one_ballots})",file=f)
+print(f"{candidate_two}: {round(candidate_two_ballots/vote_count*100,3)}% ({candidate_two_ballots})",file=f)
+print(f"{candidate_three}: {round(candidate_three_ballots/vote_count*100,3)}% ({candidate_three_ballots})",file=f)
+print(f"{candidate_four}: {round(candidate_four_ballots/vote_count*100,3)}% ({candidate_four_ballots})",file=f)
+
+#calculate winner, as the mode (most common value) in the vote_list list, containing every single vote.
+print("----------------",file=f)
+print(f'Winner: {mode(vote_list)}',file=f)
+print("----------------",file=f)
+
+f.close()
