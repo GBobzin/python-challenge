@@ -79,11 +79,8 @@ print("Greatest Decrease in Profits: "+ str(Min_decrease_date) + "  ($"+str(Min_
 
 #printanalysis to text file
 
-#Addition of total operations
-Total = sum(sum_Profitloss)
-
-
 f = open('analysis.txt', 'wt')
+
 
 print('Financial Analysis',file=f)
 
@@ -101,3 +98,5 @@ print("Greatest Increase in Profits: "+ str(Max_increase_date) + "  ($"+str(Max_
 print("Greatest Decrease in Profits: "+ str(Min_decrease_date) + "  ($"+str(Min_decrease)+")" ,file=f)
 
 f.close()
+
+
